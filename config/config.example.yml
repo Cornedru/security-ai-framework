@@ -1,0 +1,18 @@
+# Security AI Framework Configuration
+
+core:
+  log_level: INFO
+  max_threads: 4
+  temp_dir: /tmp/security-ai
+
+tools:
+  nmap:
+    path: /usr/bin/nmap
+    scan_timeout: 3600
+  metasploit:
+    rpc_host: localhost
+    rpc_port: 55553
+    api_token: your_token_here
+  burp:
+    api_url: http://localhost:1337
+    api_key: your_api_key_here
