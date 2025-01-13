@@ -1,16 +1,27 @@
 # Security AI Framework
 
-Advanced AI-powered security framework for pentesting, incident response, and threat intelligence.
+An advanced AI-powered security framework for pentesting, incident response, and threat intelligence.
 
 ## Features
 
-- Automated vulnerability scanning and analysis
-- ML-powered threat detection
-- Integration with popular security tools (Nmap, Metasploit, Burp Suite)
-- Real-time monitoring and alerts
-- Comprehensive reporting system
+- 🔍 **Automated Security Scanning**
+  - Integration with Nmap, Metasploit, and Burp Suite
+  - Customizable scan configurations
+  - Real-time scan progress monitoring
 
-## Installation
+- 🤖 **AI-Powered Analysis**
+  - Machine Learning threat detection
+  - Anomaly detection in network traffic
+  - Pattern recognition in attack vectors
+
+- 📊 **Advanced Reporting**
+  - Detailed vulnerability reports
+  - Risk assessment
+  - Compliance impact analysis
+
+## Quick Start
+
+### Installation
 
 ```bash
 # Clone the repository
@@ -18,35 +29,94 @@ git clone https://github.com/Cornedru/security-ai-framework.git
 cd security-ai-framework
 
 # Install dependencies
-pip install -r requirements.txt
+npm install
 
-# Configure the environment
+# Start the development server
+npm run dev
+```
+
+### Configuration
+
+1. Create a configuration file:
+```bash
 cp config/config.example.yml config/config.yml
+```
+
+2. Edit `config.yml` with your settings:
+```yaml
+core:
+  log_level: INFO
+  max_threads: 4
+
+tools:
+  nmap:
+    path: /usr/bin/nmap
+  metasploit:
+    rpc_host: localhost
+    rpc_port: 55553
 ```
 
 ## Usage
 
-```python
-from security_ai.core import SecurityAIAgent
+### Web Interface
 
-# Initialize the agent
-agent = SecurityAIAgent('config/config.yml')
+The framework provides a user-friendly web interface for:
+- Configuring security tools
+- Managing scans
+- Viewing results and reports
+- Monitoring system status
 
-# Start a security scan
-results = await agent.scan_target('target.example.com')
+### API Usage
 
-# Generate report
-report = agent.generate_report(results)
+```javascript
+import { SecurityAIFramework } from 'security-ai-framework';
+
+// Initialize the framework
+const framework = new SecurityAIFramework({
+  configPath: './config.yml'
+});
+
+// Start a security scan
+const results = await framework.startScan({
+  target: 'example.com',
+  scanType: 'full',
+  options: {
+    ports: '1-1000',
+    serviceDetection: true
+  }
+});
 ```
 
-## Documentation
+## Architecture
 
-Detailed documentation is available in the `docs/` directory.
+### Components
+
+- **Core Engine**: Main framework logic and coordination
+- **Security Tools Integration**: Interfaces with security tools
+- **AI Models**: Machine learning components for analysis
+- **UI Dashboard**: Web interface for management
+- **API Layer**: Programmatic access to framework features
+
+### Directory Structure
+
+```
+security-ai-framework/
+├── src/
+│   ├── components/       # React components
+│   ├── core/            # Core framework logic
+│   ├── models/          # AI models
+│   └── tools/           # Tool integrations
+├── config/              # Configuration files
+├── docs/               # Documentation
+└── tests/              # Test suites
+```
 
 ## Contributing
 
-Contributions are welcome! Please read our [Contributing Guide](CONTRIBUTING.md) for details.
+1. Fork the repository
+2. Create your feature branch
+3. Submit a pull request
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+MIT License - see LICENSE file for details
