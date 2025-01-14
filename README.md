@@ -1,52 +1,39 @@
 # Security AI Framework
 
-Advanced AI-powered security framework for pentesting, incident response, and threat intelligence.
-
-## Features
-
-- Automated vulnerability scanning and analysis
-- ML-powered threat detection
-- Integration with popular security tools (Nmap, Metasploit, Burp Suite)
-- Real-time monitoring and alerts
-- Comprehensive reporting system
+Framework de sécurité avancé alimenté par l'IA pour le pentesting, la réponse aux incidents et l'intelligence des menaces.
 
 ## Installation
 
 ```bash
-# Clone the repository
+# Cloner le repository
 git clone https://github.com/Cornedru/security-ai-framework.git
 cd security-ai-framework
 
-# Install dependencies
+# Installer les dépendances
 pip install -r requirements.txt
-
-# Configure the environment
-cp config/config.example.yml config/config.yml
 ```
 
-## Usage
+## Utilisation
 
-```python
-from security_ai.core import SecurityAIAgent
-
-# Initialize the agent
-agent = SecurityAIAgent('config/config.yml')
-
-# Start a security scan
-results = await agent.scan_target('target.example.com')
-
-# Generate report
-report = agent.generate_report(results)
+```bash
+# Lancer l'interface en ligne de commande
+python security_framework_cli.py
 ```
 
-## Documentation
+## Fonctionnalités
 
-Detailed documentation is available in the `docs/` directory.
+- 🤖 Agent IA intégré
+- 🔍 Scans de sécurité automatisés
+- 📊 Analyse en temps réel
+- 📝 Rapports détaillés
+- 🛡️ Recommandations de sécurité
 
-## Contributing
+## Structure
 
-Contributions are welcome! Please read our [Contributing Guide](CONTRIBUTING.md) for details.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+```
+security-ai-framework/
+├── security_ai_agent.py     # Agent IA
+├── security_framework_cli.py # Interface CLI
+├── requirements.txt         # Dépendances
+└── README.md               # Documentation
+```
