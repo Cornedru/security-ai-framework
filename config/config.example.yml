@@ -1,16 +1,28 @@
-# Configuration du Security AI Framework
+# Configuration du framework
 
-core:
-  log_level: INFO
-  max_threads: 4
+log_level: INFO
+monitoring_interval: 3600
 
-tools:
-  nmap:
-    path: /usr/bin/nmap
-  metasploit:
-    rpc_host: localhost
-    rpc_port: 55553
-    api_token: your_token_here
-  burp:
-    api_url: http://localhost:1337
-    api_key: your_api_key_here
+web_scanner:
+  timeout: 30
+  max_depth: 3
+
+network:
+  interface: eth0
+  capture_timeout: 300
+
+malware:
+  max_file_size: 10485760
+
+threat_intel:
+  api_keys:
+    virustotal: your_key_here
+    alienvault: your_key_here
+
+apt:
+  detection_threshold: 0.8
+  window_size: 1000
+
+reporting:
+  output_dir: reports
+  format: pdf

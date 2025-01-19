@@ -1,39 +1,33 @@
-# Security AI Framework
+# Advanced Security Framework
 
-Framework de sécurité avancé alimenté par l'IA pour le pentesting, la réponse aux incidents et l'intelligence des menaces.
+Framework de sécurité avancé intégrant :
+
+## Fonctionnalités
+
+- 🔍 Scan de vulnérabilités Web
+- 🌐 Analyse réseau en temps réel
+- 🦠 Détection de malware
+- 🎯 Détection des APT
+- 🔒 Intégration Threat Intelligence
+- 📊 Génération de rapports détaillés
 
 ## Installation
 
 ```bash
-# Cloner le repository
 git clone https://github.com/Cornedru/security-ai-framework.git
 cd security-ai-framework
-
-# Installer les dépendances
 pip install -r requirements.txt
 ```
 
 ## Utilisation
 
-```bash
-# Lancer l'interface en ligne de commande
-python security_framework_cli.py
+```python
+from security_framework.orchestrator import SecurityOrchestrator
+
+orchestrator = SecurityOrchestrator('config.yml')
+await orchestrator.run_security_scan('example.com')
 ```
 
-## Fonctionnalités
+## Documentation
 
-- 🤖 Agent IA intégré
-- 🔍 Scans de sécurité automatisés
-- 📊 Analyse en temps réel
-- 📝 Rapports détaillés
-- 🛡️ Recommandations de sécurité
-
-## Structure
-
-```
-security-ai-framework/
-├── security_ai_agent.py     # Agent IA
-├── security_framework_cli.py # Interface CLI
-├── requirements.txt         # Dépendances
-└── README.md               # Documentation
-```
+Consultez le wiki pour la documentation complète et les guides d'utilisation.
